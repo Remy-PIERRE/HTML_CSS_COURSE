@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive design - Media queries</title>
+
+		<link rel="stylesheet" href="../style/main.css" />
+		<link rel="stylesheet" href="../style/header.css" />
+		<link rel="stylesheet" href="../style/mediaQueries.css" />
+	</head>
+	<body>
+		<header class="header--container">
+			<div class="header--wrapper">
+				<h1>Media queries</h1>
+
+				<div class="header--content--wrapper">
+					<div class="select--wrapper" id="headerSelect">
+						<h2>Démonstration</h2>
+						<div class="select--list">
+							<p>Démonstration</p>
+							<p>Barre de navigation</p>
+						</div>
+						<img
+							src="/public/images/triangle_haut.png"
+							alt="icone indiquant un menu déroulant" />
+					</div>
+
+					<div class="header--toHome--wrapper" id="toHome">
+						<img
+							src="/public/images/accueil.png"
+							alt="icone pour revenir à l'accueil" />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<article class="article--container">
+				<div class="article--wrapper media--demonstration">
+					<div class="media--cell">
+						<h3 class="media--cell--title">&Eacute;cran uniquement</h3>
+						<div class="media--cell--square screen"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Impression uniquement</h3>
+						<div class="media--cell--square print"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Orientation portrait</h3>
+						<div class="media--cell--square portrait"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Orientation paysage</h3>
+						<div class="media--cell--square landscape"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Largeur < 976px</h3>
+						<div class="media--cell--square minWidth"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Largeur > 976px</h3>
+						<div class="media--cell--square maxWidth"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Impression et paysage</h3>
+						<div class="media--cell--square printLandscape"></div>
+					</div>
+					<div class="media--cell">
+						<h3 class="media--cell--title">Aucun média</h3>
+						<div class="media--cell--square all"></div>
+					</div>
+				</div>
+			</article>
+		</main>
+	</body>
+
+	<script type="module" src="../script/main.js"></script>
+</html>

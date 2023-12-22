@@ -1,0 +1,138 @@
+/* ACCUEIL */
+.accueil--header {
+	width: 100%;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	background-color: #213547;
+}
+
+.accueil--header--wrapper {
+	width: 100%;
+	padding: 32px 0;
+}
+
+.accueil--header--wrapper h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+
+/* LES AUTRES */
+.header--container {
+	width: 100%;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	background-color: #213547;
+}
+
+.header--wrapper {
+	width: 100%;
+	padding: 32px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header--wrapper h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.header--content--wrapper {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.select--wrapper {
+	width: fit-content;
+	min-width: 175px;
+	height: 40px;
+	padding: 0 42px 0 12px;
+	border: 2px inset #000;
+	border-radius: 4px;
+	background: #fff;
+	display: flex;
+	place-content: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.select--wrapper h2 {
+	font-size: 1.4rem;
+	color: #333;
+	position: relative;
+	top: 2px;
+}
+
+.select--wrapper img {
+	height: 12px;
+	width: auto;
+	position: absolute;
+	top: 14px;
+	right: 12px;
+	transform: rotate(180deg);
+	transition: transform 0.2s ease-in-out;
+}
+
+.select--wrapper img.opened {
+	transform: rotate(0deg);
+}
+
+.select--list {
+	max-height: 0px;
+	width: 100%;
+	padding: 0 40px 0 12px;
+	border-radius: 4px;
+	border: 1px solid rgb(51, 51, 51);
+	background: #fff;
+	overflow: hidden;
+	position: absolute;
+	top: 42px;
+	left: 0;
+	transition: max-height 0.4s ease-in-out;
+}
+
+.select--list.opened {
+	max-height: 500px;
+}
+
+.select--list p {
+	font-size: 1.2rem;
+	color: #333;
+	white-space: nowrap;
+}
+.select--list p:first-child {
+	padding-top: 8px;
+}
+.select--list p:last-child {
+	padding-bottom: 8px;
+}
+
+.header--toHome--wrapper {
+	height: 40px;
+	width: 40px;
+	border-radius: 100px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.header--toHome--wrapper img {
+	height: 100%;
+	width: auto;
+	object-fit: contain;
+}
+
+@media (min-width: 976px) {
+	.header--wrapper {
+		padding: 32px 40px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.header--wrapper h1 {
+		margin: 0;
+	}
+}

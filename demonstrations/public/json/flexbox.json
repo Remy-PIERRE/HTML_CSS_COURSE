@@ -1,0 +1,70 @@
+{
+    "flex-direction": [
+        {
+            "default": true,
+            "value": "row"
+        },
+        {
+           
+            "value": "row-reverse"
+        },
+        {
+           
+            "value": "column"
+        },
+        {
+           
+            "value": "column-reverse"
+        }
+    ],
+    "flex-wrap": [
+        {
+            "default": true,
+            "value": "nowrap"
+        },
+        {
+        
+            "value": "wrap"
+        },
+        {
+        
+            "value": "wrap-reverse"
+        }
+    ],
+    "justify-content": [
+        {
+            "default": true,
+            "value": "flex-start"
+        },
+        {
+            "value": "flex-end"
+        },
+        {
+            "value": "center"
+        },
+        {
+            "value": "space-between"
+        },
+        {
+            "value": "space-evenly"
+        },
+        {
+            "value": "space-around"
+        }
+    ],
+    "align-items": [       
+        {
+            "default": true,
+            "value": "flex-start"
+        },
+        {
+            "value": "flex-end"
+        },
+        {
+            "value": "center"
+        },
+        {
+            "value": "baseline"
+        }
+    ]
+}

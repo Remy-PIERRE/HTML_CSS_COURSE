@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive design - Flexbox</title>
+
+		<link rel="stylesheet" href="../style/main.css" />
+		<link rel="stylesheet" href="../style/header.css" />
+		<link rel="stylesheet" href="../style/flexbox.css" />
+	</head>
+	<body>
+		<div id="page" data-page="flexbox"></div>
+
+		<header class="header--container">
+			<div class="header--wrapper">
+				<h1>Flexbox</h1>
+
+				<div class="header--content--wrapper">
+					<div class="select--wrapper" id="selectSection">
+						<h2>Modèle courant</h2>
+						<div class="select--list">
+							<p class="select--option">Modèle courant</p>
+							<p class="select--option">flex-direction</p>
+							<p class="select--option">flex-wrap</p>
+							<p class="select--option">justify-content</p>
+							<p class="select--option">align-items</p>
+							<p class="select--option">gap</p>
+						</div>
+						<img
+							src="/public/images/triangle_haut.png"
+							alt="icone indiquant un menu déroulant" />
+					</div>
+
+					<div class="header--toHome--wrapper" id="toHomePage">
+						<img
+							src="/public/images/accueil.png"
+							alt="icone pour revenir à l'accueil" />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!--  -->
+			<!-- MODELE COURANT -->
+			<!--  -->
+			<article class="article--container" id="modeleCourant">
+				<section class="section--container">
+					<div class="section--wrapper">
+						<h2>Container : block, content : block</h2>
+
+						<div class="container block">
+							<div class="content green block mb"></div>
+							<div class="content dimensions blue block mb"></div>
+							<div class="content red block"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section--container">
+					<div class="section--wrapper">
+						<h2>Container : block, content : inline</h2>
+
+						<div class="container block">
+							<div class="content green inline mr"></div>
+							<div class="content dimensions blue inline mr"></div>
+							<div class="content red inline"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section--container">
+					<div class="section--wrapper">
+						<h2>Container : flex, content : block</h2>
+
+						<div class="container flex gap">
+							<div class="content green block"></div>
+							<div class="content dimensions blue block"></div>
+							<div class="content red block"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section--container">
+					<div class="section--wrapper">
+						<h2>Container : flex, content : inline</h2>
+
+						<div class="container flex gap">
+							<div class="content green inline"></div>
+							<div class="content dimensions blue inline"></div>
+							<div class="content red inline"></div>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<!--  -->
+			<!-- FLEX DIRECTION -->
+			<!--  -->
+			<article class="hidden" id="flexDirection">
+				<template>
+					<section class="selection--wrapper">
+						<code>
+							<p><span class="code--orange">.container</span>&nbsp;{</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;display:
+								<span class="code--orange">flex</span>;
+							</p>
+							<p class="element--default hidden">
+								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+									>// default value</span
+								>
+							</p>
+							<p class="element--attribute"></p>
+							<p>}</p>
+						</code>
+
+						<div class="container flex gap">
+							<div class="content normal green">1</div>
+							<div class="content normal blue">2</div>
+							<div class="content normal red">3</div>
+						</div>
+					</section>
+				</template>
+			</article>
+
+			<!--  -->
+			<!-- FLEX WRAP -->
+			<!--  -->
+			<article class="hidden" id="flexWrap">
+				<template>
+					<section class="selection--wrapper">
+						<code>
+							<p><span class="code--orange">.container</span>&nbsp;{</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;display:
+								<span class="code--orange">flex</span>;
+							</p>
+							<p class="element--default hidden">
+								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+									>// default value</span
+								>
+							</p>
+							<p class="element--attribute"></p>
+							<p>}</p>
+						</code>
+
+						<div class="container flex small auto gap">
+							<div class="content normal green">1</div>
+							<div class="content normal blue">2</div>
+							<div class="content normal red">3</div>
+						</div>
+					</section>
+				</template>
+			</article>
+
+			<!--  -->
+			<!-- JUSTIFY -->
+			<!--  -->
+			<article class="hidden" id="justifyContent">
+				<template>
+					<section class="selection--wrapper">
+						<code>
+							<p><span class="code--orange">.container</span>&nbsp;{</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;display:
+								<span class="code--orange">flex</span>;
+							</p>
+							<p class="element--default hidden">
+								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+									>// default value</span
+								>
+							</p>
+							<p class="element--attribute"></p>
+							<p>}</p>
+						</code>
+
+						<div class="container flex gap">
+							<div class="content normal green">1</div>
+							<div class="content normal blue">2</div>
+							<div class="content normal red">3</div>
+						</div>
+					</section>
+				</template>
+			</article>
+
+			<!--  -->
+			<!-- ALIGN -->
+			<!--  -->
+			<article class="hidden" id="alignItems">
+				<template>
+					<section class="selection--wrapper">
+						<code>
+							<p><span class="code--orange">.container</span>&nbsp;{</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;display:
+								<span class="code--orange">flex</span>;
+							</p>
+							<p class="element--default hidden">
+								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+									>// default value</span
+								>
+							</p>
+							<p class="element--attribute"></p>
+							<p>}</p>
+						</code>
+
+						<div class="container flex height gap">
+							<div class="content normal green">1</div>
+							<div class="content normal align-top blue">2</div>
+							<div class="content normal red">3</div>
+						</div>
+					</section>
+				</template>
+			</article>
+
+			<!--  -->
+			<!-- GAP -->
+			<!--  -->
+			<article class="hidden" id="gap">
+				<section class="section--container">
+					<div class="section--wrapper">
+						<code>
+							<p><span class="code--orange">.container</span>&nbsp;{</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;display:
+								<span class="code--orange">flex</span>;
+							</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+									>// default value</span
+								>
+							</p>
+							<p>
+								&emsp;&emsp;&emsp;&emsp;justify-content:
+								<span class="code--orange">flex-start</span>;
+							</p>
+							<p>}</p>
+						</code>
+
+						<div class="container flex justify-start gap">
+							<div class="content normal green">1</div>
+							<div class="content normal blue">2</div>
+							<div class="content normal red">3</div>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<!--  -->
+			<!-- FLEX DIRECTION -->
+			<!--  -->
+			<article class="hidden" id="#"></article>
+		</main>
+	</body>
+
+	<!-- <script type="module" src="../script/main.js"></script> -->
+	<script type="module" src="../script/main__.js"></script>
+</html>
