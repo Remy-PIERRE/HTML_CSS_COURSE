@@ -66,5 +66,18 @@
         {
             "value": "baseline"
         }
-    ]
+    ],
+    "gap": [
+        {            
+            "value": "20px"
+        },
+        {
+            "attribute": "row-gap",
+            "value": "20px"
+        },
+        {
+            "attribute": "column-gap",
+            "value": "20px"
+        }        
+    ]    
 }

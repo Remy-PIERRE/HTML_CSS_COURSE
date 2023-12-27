@@ -36,6 +36,10 @@ const setEvents = () => {
 	const toHomePage = document.querySelector("#toHomePage");
 	toHomePage.addEventListener("click", handleToHomePageRedirect);
 
+	const toTopOfPage = document.querySelector("#toTopOfPage");
+	toTopOfPage.addEventListener("click", handleReturnToTopOfPage);
+	window.addEventListener("scroll", handleToTopOfPageVisibility);
+
 	const selectSection = document.querySelector("#selectSection");
 	selectSection.addEventListener("click", handleSelectSectionOpening);
 
@@ -43,6 +47,10 @@ const setEvents = () => {
 	selectOptions.forEach((option) =>
 		option.addEventListener("click", handleOptionSelection)
 	);
+
+	[...selectOptions]
+		.find((option) => option.innerHTML === "order")
+		.dispatchEvent(new CustomEvent("click"));
 };
 
 const handleToHomePageRedirect = () => {
@@ -109,7 +117,8 @@ const initArticle = (text) => {
 			const template = article
 				.querySelector("template")
 				.content.cloneNode(true);
-			createSection(template, { ...data, attribute: text });
+			if (data.attribute) createSection(template, { ...data });
+			else createSection(template, { ...data, attribute: text });
 			article.appendChild(template);
 		});
 	}
@@ -124,6 +133,21 @@ const createSection = (template, data) => {
 	if (isDefault) elementDefault.classList.toggle("hidden");
 	elementAttribute.innerHTML = `&emsp;&emsp;&emsp;&emsp;${attribute}: <span class="code--orange">${value}</span>`;
 	container.setAttribute("style", `${attribute}: ${value}`);
+};
+
+const handleReturnToTopOfPage = () => {
+	window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+};
+
+const handleToTopOfPageVisibility = () => {
+	const toTopOfPage = document.querySelector("#toTopOfPage");
+	if (window.scrollY < 200 && ![...toTopOfPage.classList].includes("hidden"))
+		toTopOfPage.classList.toggle("hidden");
+	else if (
+		window.scrollY >= 200 &&
+		[...toTopOfPage.classList].includes("hidden")
+	)
+		toTopOfPage.classList.toggle("hidden");
 };
 
 initApp();

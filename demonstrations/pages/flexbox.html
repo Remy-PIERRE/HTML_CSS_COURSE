@@ -10,32 +10,44 @@
 		<link rel="stylesheet" href="../style/flexbox.css" />
 	</head>
 	<body>
+		<div id="page" data-page="flexbox"></div>
+
 		<header class="header--container">
 			<div class="header--wrapper">
 				<h1>Flexbox</h1>
 
 				<div class="header--content--wrapper">
-					<div class="select--wrapper" id="headerSelect">
+					<div class="select--wrapper" id="selectSection">
 						<h2>Modèle courant</h2>
 						<div class="select--list">
-							<p>Modèle courant</p>
-							<p>flex-direction</p>
-							<p>flex-wrap</p>
-							<p>justify-content</p>
-							<p>align-items</p>
-							<p>gap</p>
+							<p class="select--option">Modèle courant</p>
+							<p class="select--option">flex-direction</p>
+							<p class="select--option">flex-wrap</p>
+							<p class="select--option">justify-content</p>
+							<p class="select--option">align-items</p>
+							<p class="select--option">gap</p>
+							<p class="select--option">order</p>
+							<p class="select--option">grow</p>
+							<p class="select--option">shrink</p>
+							<p class="select--option">align-self</p>
 						</div>
 						<img
 							src="/public/images/triangle_haut.png"
 							alt="icone indiquant un menu déroulant" />
 					</div>
 
-					<div class="header--toHome--wrapper" id="toHome">
+					<div class="header--toHome--wrapper" id="toHomePage">
 						<img
 							src="/public/images/accueil.png"
 							alt="icone pour revenir à l'accueil" />
 					</div>
 				</div>
+			</div>
+
+			<div class="fixed--button--wrapper hidden" id="toTopOfPage">
+				<img
+					src="/public/images/arrow_down.png"
+					alt="icone d'une flèche pour remonter en haut de la page" />
 			</div>
 		</header>
 
@@ -97,429 +109,212 @@
 			<!-- FLEX DIRECTION -->
 			<!--  -->
 			<article class="hidden" id="flexDirection">
-				<section class="section--container">
-					<div class="section--wrapper">
+				<template>
+					<section class="selection--wrapper">
 						<code>
 							<p><span class="code--orange">.container</span>&nbsp;{</p>
 							<p>
 								&emsp;&emsp;&emsp;&emsp;display:
 								<span class="code--orange">flex</span>;
 							</p>
-							<p>
+							<p class="element--default hidden">
 								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
 									>// default value</span
 								>
 							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-direction:
-								<span class="code--orange">row</span>;
-							</p>
+							<p class="element--attribute"></p>
 							<p>}</p>
 						</code>
 
-						<div class="container flex">
-							<div class="content normal green mr">1</div>
-							<div class="content normal blue mr">2</div>
+						<div class="container flex gap">
+							<div class="content normal green">1</div>
+							<div class="content normal blue">2</div>
 							<div class="content normal red">3</div>
 						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-direction:
-								<span class="code--orange">row-reverse</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex d-row-reverse">
-							<div class="content normal green">1</div>
-							<div class="content normal blue mr">2</div>
-							<div class="content normal red mr">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-direction:
-								<span class="code--orange">column</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex d-col">
-							<div class="content normal green mb">1</div>
-							<div class="content normal blue mb">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-direction:
-								<span class="code--orange">column-reverse</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex d-col-reverse">
-							<div class="content normal green">1</div>
-							<div class="content normal blue mb">2</div>
-							<div class="content normal red mb">3</div>
-						</div>
-					</div>
-				</section>
+					</section>
+				</template>
 			</article>
 
 			<!--  -->
-			<!-- FLEX DIRECTION -->
+			<!-- FLEX WRAP -->
 			<!--  -->
 			<article class="hidden" id="flexWrap">
-				<section class="section--container">
-					<div class="section--wrapper">
+				<template>
+					<section class="selection--wrapper">
 						<code>
 							<p><span class="code--orange">.container</span>&nbsp;{</p>
 							<p>
 								&emsp;&emsp;&emsp;&emsp;display:
 								<span class="code--orange">flex</span>;
 							</p>
-							<p>
+							<p class="element--default hidden">
 								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
 									>// default value</span
 								>
 							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-wrap:
-								<span class="code--orange">nowrap</span>;
-							</p>
+							<p class="element--attribute"></p>
 							<p>}</p>
 						</code>
 
-						<div class="container flex nowrap gap">
+						<div class="container flex small auto gap">
 							<div class="content normal green">1</div>
 							<div class="content normal blue">2</div>
 							<div class="content normal red">3</div>
 						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-wrap:
-								<span class="code--orange">wrap</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex wrap gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;flex-wrap:
-								<span class="code--orange">wrap-reverse</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex wrap-reverse gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
+					</section>
+				</template>
 			</article>
 
 			<!--  -->
 			<!-- JUSTIFY -->
 			<!--  -->
 			<article class="hidden" id="justifyContent">
-				<section class="section--container">
-					<div class="section--wrapper">
+				<template>
+					<section class="selection--wrapper">
 						<code>
 							<p><span class="code--orange">.container</span>&nbsp;{</p>
 							<p>
 								&emsp;&emsp;&emsp;&emsp;display:
 								<span class="code--orange">flex</span>;
 							</p>
-							<p>
+							<p class="element--default hidden">
 								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
 									>// default value</span
 								>
 							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">flex-start</span>;
-							</p>
+							<p class="element--attribute"></p>
 							<p>}</p>
 						</code>
 
-						<div class="container flex justify-start gap">
+						<div class="container flex gap">
 							<div class="content normal green">1</div>
 							<div class="content normal blue">2</div>
 							<div class="content normal red">3</div>
 						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">flex-end</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex justify-end gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">center</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex justify-center gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">space-between</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex justify-between gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">space-around</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex justify-around gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">space-evenly</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex justify-evenly gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
+					</section>
+				</template>
 			</article>
 
 			<!--  -->
 			<!-- ALIGN -->
 			<!--  -->
 			<article class="hidden" id="alignItems">
-				<section class="section--container">
-					<div class="section--wrapper">
+				<template>
+					<section class="selection--wrapper">
 						<code>
 							<p><span class="code--orange">.container</span>&nbsp;{</p>
 							<p>
 								&emsp;&emsp;&emsp;&emsp;display:
 								<span class="code--orange">flex</span>;
 							</p>
-							<p>
+							<p class="element--default hidden">
 								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
 									>// default value</span
 								>
 							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;align-items:
-								<span class="code--orange">stretch</span>;
-							</p>
+							<p class="element--attribute"></p>
 							<p>}</p>
 						</code>
 
-						<div class="container flex align-stretch gap">
+						<div class="container flex height gap">
 							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
+							<div class="content normal align-top blue">2</div>
 							<div class="content normal red">3</div>
 						</div>
-					</div>
-				</section>
-
-				<section class="section--container">
-					<div class="section--wrapper">
-						<code>
-							<p><span class="code--orange">.container</span>&nbsp;{</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;display:
-								<span class="code--orange">flex</span>;
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
-									>// default value</span
-								>
-							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;align-items:
-								<span class="code--orange">stretch</span>;
-							</p>
-							<p>}</p>
-						</code>
-
-						<div class="container flex align-stretch gap">
-							<div class="content normal green">1</div>
-							<div class="content normal blue">2</div>
-							<div class="content normal red">3</div>
-						</div>
-					</div>
-				</section>
+					</section>
+				</template>
 			</article>
 
 			<!--  -->
 			<!-- GAP -->
 			<!--  -->
 			<article class="hidden" id="gap">
-				<section class="section--container">
-					<div class="section--wrapper">
+				<template>
+					<section class="selection--wrapper">
 						<code>
 							<p><span class="code--orange">.container</span>&nbsp;{</p>
 							<p>
 								&emsp;&emsp;&emsp;&emsp;display:
 								<span class="code--orange">flex</span>;
 							</p>
-							<p>
+							<p class="element--default hidden">
 								&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
 									>// default value</span
 								>
 							</p>
-							<p>
-								&emsp;&emsp;&emsp;&emsp;justify-content:
-								<span class="code--orange">flex-start</span>;
-							</p>
+							<p class="element--attribute"></p>
 							<p>}</p>
 						</code>
 
-						<div class="container flex justify-start gap">
+						<div class="container flex small auto wrap">
 							<div class="content normal green">1</div>
 							<div class="content normal blue">2</div>
 							<div class="content normal red">3</div>
 						</div>
-					</div>
-				</section>
+					</section>
+				</template>
 			</article>
 
 			<!--  -->
-			<!-- FLEX DIRECTION -->
+			<!-- FLEX ORDER -->
 			<!--  -->
-			<article class="hidden" id="#"></article>
+			<article class="hidden" id="order">
+				<section class="selection--wrapper">
+					<code>
+						<p><span class="code--orange">.content--2</span>&nbsp;{</p>
+						<p class="element--default">
+							&emsp;&emsp;&emsp;&emsp;<span class="code--grey"
+								>// default value</span
+							>
+						</p>
+						<p class="element--attribute">
+							&emsp;&emsp;&emsp;&emsp;order: <span class="code--orange">0</span>
+						</p>
+						<p>}</p>
+					</code>
+
+					<div class="container flex gap">
+						<div class="content normal green">1</div>
+						<div class="content normal crimson">2</div>
+						<div class="content normal red">3</div>
+					</div>
+				</section>
+
+				<section class="selection--wrapper">
+					<code>
+						<p><span class="code--orange">.content--2</span>&nbsp;{</p>
+						<p class="element--default"></p>
+						<p class="element--attribute">
+							&emsp;&emsp;&emsp;&emsp;order: <span class="code--orange">2</span>
+						</p>
+						<p>}</p>
+					</code>
+
+					<div class="container flex gap">
+						<div class="content normal green">1</div>
+						<div class="content normal crimson order_2">2</div>
+						<div class="content normal red">3</div>
+					</div>
+				</section>
+
+				<section class="selection--wrapper">
+					<code>
+						<p><span class="code--orange">.content--2</span>&nbsp;{</p>
+						<p class="element--default"></p>
+						<p class="element--attribute">
+							&emsp;&emsp;&emsp;&emsp;order:
+							<span class="code--orange">-1</span>
+						</p>
+						<p>}</p>
+					</code>
+
+					<div class="container flex gap">
+						<div class="content normal green">1</div>
+						<div class="content normal crimson order_-1">2</div>
+						<div class="content normal red">3</div>
+					</div>
+				</section>
+			</article>
 		</main>
 	</body>
 

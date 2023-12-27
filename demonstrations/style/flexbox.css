@@ -202,3 +202,19 @@ code {
 .height {
 	height: 150px;
 }
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.order_2 {
+	order: 2;
+}
+
+.order_-1 {
+	order: -1;
+}
+
+.crimson {
+	background: crimson;
+}
